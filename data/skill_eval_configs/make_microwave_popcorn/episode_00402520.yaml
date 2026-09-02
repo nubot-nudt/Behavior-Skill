@@ -1,0 +1,120 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# skill_eval_configs/make_microwave_popcorn/episode_00402520.yaml
+#
+# Subtask evaluation config file (mirrors problem0.bddl for the full task)
+#
+# Source:
+#   episode_00402520_step.json
+#   8 skills, frame ranges:
+#     skill_00: 0     -> 1065
+#     skill_01: 1065  -> 1566
+#     skill_02: 1566  -> 1773
+#     skill_03: 1803  -> 2346
+#     skill_04: 2346  -> 2709
+#     skill_05: 2760  -> 3453
+#     skill_06: 3585  -> 3812
+#     skill_07: 3903  -> 4206
+#
+# Task description:
+#   In the kitchen, take the popcorn bag from the countertop, put it into
+#   the microwave, and heat it until the popcorn is cooked so the cooked
+#   popcorn ends up inside the bag.
+# ─────────────────────────────────────────────────────────────────────────────
+task_name: make_microwave_popcorn
+activity_definition_id: 0
+
+# -- BDDL common section (identical to problem0.bddl) -------------------------
+objects_bddl: |
+  (:objects
+      popcorn.n.02_1 - popcorn.n.02
+      cooked__popcorn.n.01_1 - cooked__popcorn.n.01
+      popcorn__bag.n.01_1 - popcorn__bag.n.01
+      microwave.n.02_1 - microwave.n.02
+      countertop.n.01_1 - countertop.n.01
+      floor.n.01_1 - floor.n.01
+      agent.n.01_1 - agent.n.01
+  )
+
+init_bddl: |
+  (:init
+      (filled popcorn__bag.n.01_1 popcorn.n.02_1)
+      (ontop popcorn__bag.n.01_1 countertop.n.01_1)
+      (inroom microwave.n.02_1 kitchen)
+      (inroom countertop.n.01_1 kitchen)
+      (inroom floor.n.01_1 kitchen)
+      (future cooked__popcorn.n.01_1)
+      (ontop agent.n.01_1 floor.n.01_1)
+  )
+
+# -- Per-skill evaluation definitions ---------------------------------------
+# bddl_goal: BDDL goal expression(excluding the outer (:goal ...) wrapper, only the internal logic part)
+#   null -> this skill is not suitable for standalone evaluation(e.g., pure navigation), skip
+# type: skill type annotation (for documentation only, does not affect evaluation logic)
+
+skills:
+  # -- Skill 0: Navigate to microwave -----------------------------------------
+  - id: 0
+    instruction: "Move to the microwave on the countertop in the kitchen."
+    # instruction: "Move towards the microwave in the kitchen area."
+    # instruction: "Move towards the microwave in the kitchen using the base."
+    skill_description: "move to"
+    type: navigation
+    # near predicate: robot base XY-plane distance to target <= NearPredicate.DISTANCE_THRESHOLD (1.5m)
+    bddl_goal: "(near agent.n.01_1 microwave.n.02_1)"
+
+  # -- Skill 1: Open microwave door (right gripper) ---------------------------
+  - id: 1
+    instruction: "Open the door of the microwave using the right gripper."
+    skill_description: "open door"
+    type: manipulation
+    # open predicate: microwave door is in open state
+    bddl_goal: "(open microwave.n.02_1)"
+
+  # -- Skill 2: Navigate to countertop (near popcorn bag) --------------------
+  - id: 2
+    instruction: "Move to the popcorn bag on the countertop in the kitchen."
+    skill_description: "move to"
+    type: navigation
+    bddl_goal: "(near agent.n.01_1 popcorn__bag.n.01_1)"
+
+  # -- Skill 3: Pick up popcorn bag from countertop (right gripper) -----------
+  - id: 3
+    instruction: "Pick up the popcorn bag from the countertop using the right gripper."
+    skill_description: "pick up from"
+    type: manipulation
+    bddl_goal: "(grasped agent.n.01_1 popcorn__bag.n.01_1)"
+
+  # -- Skill 4: Navigate back to microwave (holding popcorn bag) -------------
+  - id: 4
+    instruction: "Move back to the microwave on the countertop in the kitchen."
+    skill_description: "move to"
+    type: navigation
+    # Success when robot is near microwave (grasped state guaranteed by initial state)
+    bddl_goal: "(near agent.n.01_1 microwave.n.02_1)"
+
+  # -- Skill 5: Place popcorn bag into microwave (right gripper) -------------
+  - id: 5
+    instruction: "Place the popcorn bag into the microwave using the right gripper."
+    skill_description: "place in"
+    type: manipulation
+    # inside predicate: popcorn bag is inside the microwave cavity
+    bddl_goal: "(and (inside popcorn__bag.n.01_1 microwave.n.02_1) (not (grasped agent.n.01_1 popcorn__bag.n.01_1)))"
+
+  # -- Skill 6: Close microwave door (left gripper) --------------------------
+  - id: 6
+    instruction: "Close the door of the microwave using the left gripper."
+    skill_description: "close door"
+    type: manipulation
+    bddl_goal: "(not (open microwave.n.02_1))"
+
+  # -- Skill 7: Turn on microwave switch (right gripper) ---------------------
+  - id: 7
+    instruction: "Turn on the switch of the microwave using the right gripper."
+    skill_description: "turn on switch"
+    type: manipulation
+    # toggled_on predicate: microwave is powered on/running
+    # Note: The full task goal is (real cooked__popcorn.n.01_1) AND
+    #     (contains popcorn__bag.n.01_1 cooked__popcorn.n.01_1),
+    #     but this transformation is auto-triggered by the simulation engine
+    #     when toggled_on + inside conditions are met. Subtask eval only checks
+    bddl_goal: "(toggled_on microwave.n.02_1)"

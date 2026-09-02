@@ -1,0 +1,904 @@
+{
+    "tasks": [
+        {
+            "task_name": "turning_on_radio",
+            "task_prompt": "Turn on the radio receiver that's on the table in the living room.",
+            "episodes": [
+                "00000010",
+                "00000250",
+                "00000470",
+                "00000700",
+                "00000940",
+                "00001250",
+                "00001590",
+                "00001960",
+                "00002600",
+                "00003000"
+            ],
+            "states_root": "skill_init_states/task-0000",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "picking_up_trash",
+            "task_prompt": "Put the three can of soda from the living room inside the tash can in the kitchen.",
+            "episodes": [
+                "00010030",
+                "00010320",
+                "00010680",
+                "00011160",
+                "00011430",
+                "00011930",
+                "00012200",
+                "00012550",
+                "00012780",
+                "00013000"
+            ],
+            "states_root": "skill_init_states/task-0001",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "putting_away_Halloween_decorations",
+            "task_prompt": "Place each of the two pumpkins and all three candles from the living room inside a cabinet in the living room (use any cabinet), then make sure every cabinet is closed, and position the cauldron so it is next to a table in the living room.",
+            "episodes": [
+                "00020050",
+                "00020130",
+                "00020550",
+                "00020620",
+                "00020890",
+                "00021390",
+                "00021760",
+                "00022110",
+                "00022350",
+                "00022700"
+            ],
+            "states_root": "skill_init_states/task-0002",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "cleaning_up_plates_and_food",
+            "task_prompt": "From the breakfast table in the kitchen, move both pizzas - keeping each on its plate - into the same refrigerator, put both bowls into one sink, and make sure the refrigerator is closed.",
+            "episodes": [
+                "00030040",
+                "00030440",
+                "00030760",
+                "00031050",
+                "00031430",
+                "00031710",
+                "00032110",
+                "00032420",
+                "00032700",
+                "00033000"
+            ],
+            "states_root": "skill_init_states/task-0003",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "can_meat",
+            "task_prompt": "Open the kitchen cabinet, take out the two hinged jars, open them, place exactly two cooked bratwursts from the chopping board on the countertop into each jar, then close both jars, put them back inside the cabinet, and close the cabinet.",
+            "episodes": [
+                "00040040",
+                "00040230",
+                "00040550",
+                "00040780",
+                "00041610",
+                "00041920",
+                "00042130",
+                "00042490",
+                "00042740",
+                "00042970"
+            ],
+            "states_root": "skill_init_states/task-0004",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "setting_mousetraps",
+            "task_prompt": "Take the four mousetraps from the cabinet in the bathroom and place them on the bathroom floor. Make sure all four end up on the same floor surface, and ensure that at least two of them are either under or directly next to the same bathroom sink.",
+            "episodes": [
+                "00050020",
+                "00050290",
+                "00050550",
+                "00050790",
+                "00051120",
+                "00051580",
+                "00051830",
+                "00052170",
+                "00052390",
+                "00052980"
+            ],
+            "states_root": "skill_init_states/task-0005",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "hiding_Easter_eggs",
+            "task_prompt": "Take the three Easter eggs out of the wicker basket on the lawn in the garden, then place them on the lawn next to a single tree (choose any tree) so that all three eggs are next to the same tree and none are left in the basket.",
+            "episodes": [
+                "00060010",
+                "00060190",
+                "00060330",
+                "00060940",
+                "00061020",
+                "00061600",
+                "00061620",
+                "00062020",
+                "00062430",
+                "00063000"
+            ],
+            "states_root": "skill_init_states/task-0006",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "picking_up_toys",
+            "task_prompt": "Put all the toys in the child's room - the three board games (two on the bed and one on the table), the two jigsaw puzzles on the table, and the tennis ball on the table - inside the toy box on the table in the child's room.",
+            "episodes": [
+                "00070010",
+                "00070340",
+                "00070480",
+                "00070890",
+                "00071090",
+                "00071380",
+                "00072010",
+                "00072160",
+                "00072630",
+                "00072980"
+            ],
+            "states_root": "skill_init_states/task-0007",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "rearranging_kitchen_furniture",
+            "task_prompt": "Move the toaster, food processor, and French press from the kitchen countertop into the same kitchen cabinet, and make sure that cabinet is closed at the end.",
+            "episodes": [
+                "00080040",
+                "00080050",
+                "00080170",
+                "00080310",
+                "00080440",
+                "00080690",
+                "00081560",
+                "00082090",
+                "00082550",
+                "00082990"
+            ],
+            "states_root": "skill_init_states/task-0008",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "putting_up_Christmas_decorations_inside",
+            "task_prompt": "In the living room, take the wreath, three candy canes, and two pillar candles out of the wicker basket. Place the wreath and two of the candy canes on the same living-room sofa. Put the remaining candy cane on top of a dining-room table. Put both pillar candles together on top of one dining-room table (they can share the same table). Finally, place all three gift boxes under or right next to the Christmas tree in the living room.",
+            "episodes": [
+                "00090010",
+                "00090450",
+                "00090990",
+                "00091150",
+                "00091380",
+                "00091670",
+                "00091920",
+                "00092320",
+                "00092640",
+                "00092970"
+            ],
+            "states_root": "skill_init_states/task-0009",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "set_up_a_coffee_station_in_your_kitchen",
+            "task_prompt": "Set up a coffee station on the kitchen countertop: keep the coffee maker on the countertop, move the bottle of coffee from the kitchen shelf to the counter next to the coffee maker, place a paper coffee filter on top of the coffee maker, put the saucer next to the coffee maker with the coffee cup on the saucer, and place the electric kettle next to the coffee maker.",
+            "episodes": [
+                "00100100",
+                "00100270",
+                "00100610",
+                "00100920",
+                "00101440",
+                "00101810",
+                "00102140",
+                "00102510",
+                "00102950",
+                "00102980"
+            ],
+            "states_root": "skill_init_states/task-0010",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "putting_dishes_away_after_cleaning",
+            "task_prompt": "In the kitchen, gather all eight plates from the two countertops, place them all inside a single cabinet (either one), and make sure all cabinets are closed when you're done.",
+            "episodes": [
+                "00110050",
+                "00110270",
+                "00110610",
+                "00111020",
+                "00111360",
+                "00111750",
+                "00112060",
+                "00112350",
+                "00112670",
+                "00112950"
+            ],
+            "states_root": "skill_init_states/task-0011",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "preparing_lunch_box",
+            "task_prompt": "Put both apple halves, the club sandwich, and the chocolate chip cookie from the chopping board on the kitchen countertop into the packing box on the countertop. Then take the bottle of tea out of the refrigerator, put it into the same box, and close the refrigerator when you're done.",
+            "episodes": [
+                "00120050",
+                "00120400",
+                "00120590",
+                "00120810",
+                "00121300",
+                "00121410",
+                "00121730",
+                "00122560",
+                "00122630",
+                "00122850"
+            ],
+            "states_root": "skill_init_states/task-0012",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "loading_the_car",
+            "task_prompt": "Put the digital camera from the living room table into the container on the living room floor. Then take the container and the tennis racket to the garage, place both in the car trunk, and close it.",
+            "episodes": [
+                "00130020",
+                "00130330",
+                "00130800",
+                "00131050",
+                "00131240",
+                "00131450",
+                "00131740",
+                "00132030",
+                "00132530",
+                "00133000"
+            ],
+            "states_root": "skill_init_states/task-0013",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "carrying_in_groceries",
+            "task_prompt": "Take the sack of groceries out of the car trunk in the garage, bring it to the kitchen, and put both the tomato and the carton of milk into the refrigerator in the kitchen. When you're done, close the car trunk and make sure the refrigerator in the kitchen is closed.",
+            "episodes": [
+                "00140260",
+                "00140880",
+                "00141190",
+                "00141500",
+                "00141720",
+                "00141920",
+                "00142150",
+                "00142350",
+                "00142620",
+                "00142820"
+            ],
+            "states_root": "skill_init_states/task-0014",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "bringing_in_wood",
+            "task_prompt": "Bring the three plywood sheets from the garden into the corridor and place them on the floor there.",
+            "episodes": [
+                "00150010",
+                "00150230",
+                "00150440",
+                "00151020",
+                "00151230",
+                "00151540",
+                "00151830",
+                "00152110",
+                "00152580",
+                "00152980"
+            ],
+            "states_root": "skill_init_states/task-0015",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "moving_boxes_to_storage",
+            "task_prompt": "Move the two storage containers from the living room to the garage. In the garage, place one container on the floor and stack the other container on top of it (either order is fine).",
+            "episodes": [
+                "00160010",
+                "00160240",
+                "00160480",
+                "00160690",
+                "00161090",
+                "00161560",
+                "00161780",
+                "00162080",
+                "00162330",
+                "00162630"
+            ],
+            "states_root": "skill_init_states/task-0016",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "bringing_water",
+            "task_prompt": "Retrieve the two bottles from the refrigerator in the kitchen, bring them to the living room, and place both on the coffee table. Make sure the refrigerator is closed when you finish.",
+            "episodes": [
+                "00170010",
+                "00170140",
+                "00170270",
+                "00170400",
+                "00170550",
+                "00170740",
+                "00170880",
+                "00172120",
+                "00172400",
+                "00172930"
+            ],
+            "states_root": "skill_init_states/task-0017",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "tidying_bedroom",
+            "task_prompt": "In the bedroom, move the book from the bed onto either nightstand, and place the two sandals side by side next to the bed.",
+            "episodes": [
+                "00180020",
+                "00180390",
+                "00180680",
+                "00180990",
+                "00181340",
+                "00181630",
+                "00181920",
+                "00182220",
+                "00182590",
+                "00183000"
+            ],
+            "states_root": "skill_init_states/task-0018",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "outfit_a_basic_toolbox",
+            "task_prompt": "In the utility room, put the drill, pliers, flashlight, Allen wrench, and screwdriver from the tabletop into the toolbox, keep the toolbox on the tabletop, and close the toolbox.",
+            "episodes": [
+                "00190470",
+                "00190640",
+                "00191150",
+                "00191370",
+                "00191640",
+                "00191890",
+                "00192030",
+                "00192130",
+                "00192570",
+                "00192750"
+            ],
+            "states_root": "skill_init_states/task-0019",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "sorting_vegetables",
+            "task_prompt": "Sort the vegetables from the two wicker baskets on the kitchen floor into the mixing bowls on the kitchen countertop: put all three bok choy and all three Vidalia onions together into one mixing bowl; put both leeks and both broccoli together into a second mixing bowl; and put all three sweet corn into a third mixing bowl.",
+            "episodes": [
+                "00200050",
+                "00200280",
+                "00200540",
+                "00200860",
+                "00200880",
+                "00200950",
+                "00201550",
+                "00202090",
+                "00202390",
+                "00202510"
+            ],
+            "states_root": "skill_init_states/task-0020",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "collecting_childrens_toys",
+            "task_prompt": "Pick up the two dice from the bed, the two teddy bears from the floor, and the two board games (one from the desk and one from the bed), and place them all inside the same bookcase in the child's room.",
+            "episodes": [
+                "00210020",
+                "00210030",
+                "00210320",
+                "00210620",
+                "00211210",
+                "00211470",
+                "00211760",
+                "00212090",
+                "00212530",
+                "00213000"
+            ],
+            "states_root": "skill_init_states/task-0021",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "putting_shoes_on_rack",
+            "task_prompt": "Pick up the two gym shoes and the two sandals from the corridor floor and place them onto the hallstand (shoe rack) in the corridor, making sure they are on the rack and not on the floor. Arrange them so the two gym shoes are next to each other and the two sandals are next to each other.",
+            "episodes": [
+                "00220020",
+                "00220150",
+                "00220280",
+                "00220570",
+                "00221240",
+                "00221510",
+                "00221760",
+                "00222030",
+                "00222280",
+                "00222570"
+            ],
+            "states_root": "skill_init_states/task-0022",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "boxing_books_up_for_storage",
+            "task_prompt": "Put all six books from the bookcases in the living room into the box on the living room floor.",
+            "episodes": [
+                "00230010",
+                "00230250",
+                "00230490",
+                "00230690",
+                "00230920",
+                "00231520",
+                "00232170",
+                "00232410",
+                "00232700",
+                "00233000"
+            ],
+            "states_root": "skill_init_states/task-0023",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "storing_food",
+            "task_prompt": "Put away all the food on the kitchen countertop by storing it inside the kitchen cabinets: move the two boxes of oatmeal, two bags of chips, two bottles of olive oil, and two jars of sugar from the countertop into the kitchen cabinets (each item can go into either cabinet).",
+            "episodes": [
+                "00240010",
+                "00240140",
+                "00240360",
+                "00240600",
+                "00240690",
+                "00240950",
+                "00241300",
+                "00241810",
+                "00242410",
+                "00242900"
+            ],
+            "states_root": "skill_init_states/task-0024",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "clearing_food_from_table_into_fridge",
+            "task_prompt": "Pack the half chicken and the half apple pie from the plates on the breakfast table into the two tupperware containers from the countertop, then put both tupperware containers inside the refrigerator in the kitchen and make sure the refrigerator is closed at the end.",
+            "episodes": [
+                "00250020",
+                "00250290",
+                "00250580",
+                "00250880",
+                "00251150",
+                "00251660",
+                "00251950",
+                "00252290",
+                "00252680",
+                "00252900"
+            ],
+            "states_root": "skill_init_states/task-0025",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "assembling_gift_baskets",
+            "task_prompt": "Place one candle, one butter cookie, one piece of Swiss cheese, and one bow from the table into each of the four wicker baskets on the floor in the living room.",
+            "episodes": [
+                "00260090",
+                "00260340",
+                "00260380",
+                "00260580",
+                "00260700",
+                "00260810",
+                "00261000",
+                "00261290",
+                "00262510",
+                "00262860"
+            ],
+            "states_root": "skill_init_states/task-0026",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "sorting_household_items",
+            "task_prompt": "From the two baskets on the bedroom floor, take out the items and organize them in the bathroom: place both detergent bottles under the bathroom sink next to each other; put the box of sanitary napkins on the bathroom shelf; set the soap dispenser on the sink; make sure the cup remains on the sink; put both the toothpaste tube and the toothbrush inside the cup.",
+            "episodes": [
+                "00270040",
+                "00270070",
+                "00270100",
+                "00270350",
+                "00270770",
+                "00271100",
+                "00271370",
+                "00272190",
+                "00272660",
+                "00272980"
+            ],
+            "states_root": "skill_init_states/task-0027",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "getting_organized_for_work",
+            "task_prompt": "In the bedroom, organize the workspace by keeping the computer under the desk, ensuring the monitor is on the desk, placing the keyboard on the desk next to the monitor, placing the mouse on the desk next to the keyboard, moving the folder from the swivel chair onto the desk next to the mouse, stacking the notebook on top of the folder with the pen on top of the notebook, and positioning the swivel chair next to the desk.",
+            "episodes": [
+                "00280150",
+                "00280590",
+                "00280960",
+                "00281270",
+                "00281320",
+                "00281860",
+                "00282340",
+                "00282380",
+                "00282450",
+                "00282900"
+            ],
+            "states_root": "skill_init_states/task-0028",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "clean_up_your_desk",
+            "task_prompt": "In the child's room, clean up the desk: put both folders and both paperback books into the bookcase; put the pencil and both pens into the pencil case and leave the case on the desk; take the stapler out of the bookcase and place it on the desk; move the laptop from the bed onto the desk and close it.",
+            "episodes": [
+                "00290030",
+                "00290080",
+                "00290260",
+                "00291120",
+                "00291530",
+                "00291990",
+                "00292470",
+                "00292800",
+                "00292900",
+                "00292970"
+            ],
+            "states_root": "skill_init_states/task-0029",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "setting_the_fire",
+            "task_prompt": "In the living room, place the newspaper from the table into the wood fireplace, then put both pieces of firewood from the floor on top of the newspaper. Use the cigar lighter to ignite any one of the items so that the whole pile catches fire, and then turn the lighter off.",
+            "episodes": [
+                "00300020",
+                "00300200",
+                "00300440",
+                "00300790",
+                "00301070",
+                "00301280",
+                "00301620",
+                "00301860",
+                "00302160",
+                "00302370"
+            ],
+            "states_root": "skill_init_states/task-0030",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "clean_boxing_gloves",
+            "task_prompt": "Wash the two dusty boxing gloves from the countertop in the utility room in the washer until they are no longer covered with dust.",
+            "episodes": [
+                "00310150",
+                "00310170",
+                "00310750",
+                "00310930",
+                "00311230",
+                "00311600",
+                "00311840",
+                "00312250",
+                "00312710",
+                "00312970"
+            ],
+            "states_root": "skill_init_states/task-0031",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "wash_a_baseball_cap",
+            "task_prompt": "Wash the two baseball caps on the countertop in the utility room using the washer until they are no longer dirty.",
+            "episodes": [
+                "00320010",
+                "00320320",
+                "00320700",
+                "00320970",
+                "00321040",
+                "00321500",
+                "00321770",
+                "00322150",
+                "00322460",
+                "00322490"
+            ],
+            "states_root": "skill_init_states/task-0032",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "wash_dog_toys",
+            "task_prompt": "In the utility room, take the two teddy toys, the tennis ball, and the softball out of the cabinet and wash them in the washer so that both teddies are free of dirt and dust, the tennis ball has no debris, and the softball has no dirt.",
+            "episodes": [
+                "00330020",
+                "00330320",
+                "00330660",
+                "00330900",
+                "00331110",
+                "00331350",
+                "00331530",
+                "00332050",
+                "00332250",
+                "00332460"
+            ],
+            "states_root": "skill_init_states/task-0033",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "hanging_pictures",
+            "task_prompt": "Pick up the poster from the kitchen countertop and hang it on one of the wall nails in the kitchen.",
+            "episodes": [
+                "00340030",
+                "00340490",
+                "00340760",
+                "00341190",
+                "00341460",
+                "00341700",
+                "00341870",
+                "00342210",
+                "00342500",
+                "00342980"
+            ],
+            "states_root": "skill_init_states/task-0034",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "attach_a_camera_to_a_tripod",
+            "task_prompt": "Attach the digital camera to the camera tripod in the bedroom.",
+            "episodes": [
+                "00350010",
+                "00350260",
+                "00350540",
+                "00350830",
+                "00351170",
+                "00351490",
+                "00351860",
+                "00352260",
+                "00352760",
+                "00352990"
+            ],
+            "states_root": "skill_init_states/task-0035",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "clean_a_patio",
+            "task_prompt": "Pick up the broom in the garden and sweep the mud off the patio floor until the floor is no longer covered in mud.",
+            "episodes": [
+                "00360050",
+                "00360150",
+                "00360880",
+                "00361030",
+                "00361280",
+                "00361630",
+                "00362040",
+                "00362280",
+                "00362720",
+                "00362990"
+            ],
+            "states_root": "skill_init_states/task-0036",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "clean_a_trumpet",
+            "task_prompt": "In the bedroom, pick up the scrub brush from the desk and scrub the cornet (trumpet) on the desk until it's no longer covered in dust.",
+            "episodes": [
+                "00370010",
+                "00370240",
+                "00370510",
+                "00370830",
+                "00371120",
+                "00371410",
+                "00371640",
+                "00372130",
+                "00372350",
+                "00373000"
+            ],
+            "states_root": "skill_init_states/task-0037",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "spraying_for_bugs",
+            "task_prompt": "Pick up the pesticide atomizer in the garden and spray insectifuge to fully cover both potted plants in the garden.",
+            "episodes": [
+                "00380010",
+                "00380020",
+                "00380040",
+                "00380290",
+                "00380980",
+                "00381470",
+                "00381800",
+                "00382070",
+                "00382370",
+                "00382980"
+            ],
+            "states_root": "skill_init_states/task-0038",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "spraying_fruit_trees",
+            "task_prompt": "In the garden, pick up the pesticide atomizer on the floor and spray pesticide onto both trees until each tree trunk is fully covered.",
+            "episodes": [
+                "00390020",
+                "00390290",
+                "00390580",
+                "00391220",
+                "00391530",
+                "00391820",
+                "00392100",
+                "00392410",
+                "00392730",
+                "00393000"
+            ],
+            "states_root": "skill_init_states/task-0039",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "make_microwave_popcorn",
+            "task_prompt": "In the kitchen, take the popcorn bag from the countertop, put it into the microwave, and heat it until the popcorn is cooked so the cooked popcorn ends up inside the bag.",
+            "episodes": [
+                "00400010",
+                "00400220",
+                "00400450",
+                "00400720",
+                "00400960",
+                "00401380",
+                "00401580",
+                "00402520",
+                "00402750",
+                "00403000"
+            ],
+            "states_root": "skill_init_states/task-0040",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "cook_cabbage",
+            "task_prompt": "From the kitchen refrigerator, take the cabbage and the chili, dice them on the chopping board with the knife, cook the diced cabbage and diced chili in the frying pan on the stove, and leave the cooked, diced cabbage and cooked, diced chili in the frying pan.",
+            "episodes": [
+                "00410110",
+                "00410460",
+                "00411120",
+                "00411270",
+                "00411540",
+                "00411880",
+                "00412310",
+                "00412750",
+                "00412940",
+                "00413000"
+            ],
+            "states_root": "skill_init_states/task-0041",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "chop_an_onion",
+            "task_prompt": "In the kitchen, take the Vidalia onion out of the sink, dice it on the chopping board with the paring knife, put the diced onion into the bowl on the countertop, then place both the paring knife and the chopping board into the sink.",
+            "episodes": [
+                "00420160",
+                "00420490",
+                "00420830",
+                "00420960",
+                "00421060",
+                "00421370",
+                "00421600",
+                "00421850",
+                "00422420",
+                "00422980"
+            ],
+            "states_root": "skill_init_states/task-0042",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "slicing_vegetables",
+            "task_prompt": "From the refrigerator in the kitchen, take out the two bell peppers, the two beets, and the zucchini. Then, on either chopping board on the countertop, use the parer to dice all of them so that only diced bell pepper, diced beet, and diced zucchini remain. Make sure the refrigerator is closed when you finish.",
+            "episodes": [
+                "00430020",
+                "00430070",
+                "00430120",
+                "00430690",
+                "00431260",
+                "00431610",
+                "00432110",
+                "00432320",
+                "00432580",
+                "00432910"
+            ],
+            "states_root": "skill_init_states/task-0043",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "chopping_wood",
+            "task_prompt": "Chop the four logs on the driveway in the garden into eight half logs using the axe and the chopping block.",
+            "episodes": [
+                "00440010",
+                "00440020",
+                "00440330",
+                "00440710",
+                "00441040",
+                "00441160",
+                "00441530",
+                "00442570",
+                "00442640",
+                "00442890"
+            ],
+            "states_root": "skill_init_states/task-0044",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "cook_hot_dogs",
+            "task_prompt": "Take the two hot dogs out of the refrigerator in the kitchen and cook them in the microwave until both are cooked.",
+            "episodes": [
+                "00450010",
+                "00450020",
+                "00450220",
+                "00450550",
+                "00450980",
+                "00451500",
+                "00452040",
+                "00452430",
+                "00452630",
+                "00453000"
+            ],
+            "states_root": "skill_init_states/task-0045",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "cook_bacon",
+            "task_prompt": "Take the tray with six slices of bacon out of the refrigerator in the kitchen, cook all six slices in the frying pan on the stove until they're cooked, and make sure the refrigerator is closed when you're done.",
+            "episodes": [
+                "00460010",
+                "00460340",
+                "00460650",
+                "00461120",
+                "00461490",
+                "00461910",
+                "00462150",
+                "00462410",
+                "00462730",
+                "00463000"
+            ],
+            "states_root": "skill_init_states/task-0046",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "freeze_pies",
+            "task_prompt": "In the kitchen, take the two apple pies from the plates on the countertop, put each pie into a separate tupperware container taken from the cabinet, place both tupperwares inside the refrigerator, close the refrigerator, and leave them until the pies are frozen.",
+            "episodes": [
+                "00470020",
+                "00470040",
+                "00470350",
+                "00470670",
+                "00471090",
+                "00471370",
+                "00472140",
+                "00472430",
+                "00472670",
+                "00472980"
+            ],
+            "states_root": "skill_init_states/task-0047",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "canning_food",
+            "task_prompt": "In the kitchen, open the refrigerator and the cabinet. Take the steak and the pineapple out of the refrigerator and take two bowls from the cabinet. On the chopping board on the countertop, use the carving knife to dice the steak and to dice the pineapple. Put only the diced steak into one bowl and only the diced pineapple into the other bowl - do not mix them. Place both bowls back inside the cabinet, then close the refrigerator and close the cabinet.",
+            "episodes": [
+                "00480090",
+                "00480630",
+                "00480850",
+                "00481020",
+                "00481110",
+                "00481480",
+                "00481670",
+                "00482110",
+                "00482390",
+                "00482790"
+            ],
+            "states_root": "skill_init_states/task-0048",
+            "configs_root": "skill_eval_configs"
+        },
+        {
+            "task_name": "make_pizza",
+            "task_prompt": "Make a pizza on the cookie sheet in the kitchen: take the grated cheese, the four pieces of pepperoni, and the two mushrooms from their tupperware containers in the refrigerator; chop the Vidalia onion on the chopping board with the knife, and also chop the two whole mushrooms in half; top the pizza dough that's already on the cookie sheet with the cheese, pepperoni, halved mushrooms, and chopped onion; bake it in the oven until it becomes a pizza, and leave the finished pizza on the cookie sheet.",
+            "episodes": [
+                "00490350",
+                "00490580",
+                "00491010",
+                "00491230",
+                "00491280",
+                "00491750",
+                "00492400",
+                "00492450",
+                "00492580",
+                "00492820"
+            ],
+            "states_root": "skill_init_states/task-0049",
+            "configs_root": "skill_eval_configs"
+        }
+    ]
+}

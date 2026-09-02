@@ -1,0 +1,39 @@
+{
+  "input_hdf5": "behavior_raw/task-0000/episode_00000940.hdf5",
+  "episode_id": 0,
+  "skills": [
+    {
+      "skill_idx": 0,
+      "skill": "Move to the radio on the coffee table in the living room.",
+      "start_frame": 0,
+      "end_frame": 927,
+      "state_file": "skill_init_states/task-0000/episode_00000940/skill_00_state.npz",
+      "scene_file": "skill_init_states/task-0000/episode_00000940/skill_00_scene.json"
+    },
+    {
+      "skill_idx": 1,
+      "skill": "Pick up the radio from the coffee table using the right gripper.",
+      "start_frame": 1532,
+      "end_frame": 1929,
+      "state_file": "skill_init_states/task-0000/episode_00000940/skill_01_state.npz",
+      "scene_file": "skill_init_states/task-0000/episode_00000940/skill_01_scene.json"
+    },
+    {
+      "skill_idx": 2,
+      "skill": "Turn on the switch of the radio held in the right gripper using the left gripper.",
+      "start_frame": 1929,
+      "end_frame": 2115,
+      "state_file": "skill_init_states/task-0000/episode_00000940/skill_02_state.npz",
+      "scene_file": "skill_init_states/task-0000/episode_00000940/skill_02_scene.json"
+    },
+    {
+      "skill_idx": 3,
+      "skill": "Place the radio on the coffee table using the right gripper.",
+      "start_frame": 2115,
+      "end_frame": 2462,
+      "state_file": "skill_init_states/task-0000/episode_00000940/skill_03_state.npz",
+      "scene_file": "skill_init_states/task-0000/episode_00000940/skill_03_scene.json"
+    }
+  ],
+  "extraction_mode": "replay"
+}

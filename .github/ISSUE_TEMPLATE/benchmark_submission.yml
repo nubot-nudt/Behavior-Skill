@@ -1,0 +1,118 @@
+name: Submit Benchmark Result
+description: Submit an evaluation result to the Behavior-Skill leaderboard
+title: "[Result] "
+labels:
+  - benchmark-submission
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a result to the Behavior-Skill benchmark.
+
+        Please use the official evaluation set, evaluation code, and metric definitions.
+        The submitted result will be reviewed before it appears on the public leaderboard.
+
+  - type: input
+    id: method
+    attributes:
+      label: Method / Model Name
+      description: Name of the evaluated method or model.
+      placeholder: "e.g., π0.5"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: prompt_type
+    attributes:
+      label: Prompt Type
+      description: Language instruction used during independent skill evaluation.
+      options:
+        - Task Prompt
+        - Skill Prompt
+    validations:
+      required: true
+
+  - type: dropdown
+    id: training_data
+    attributes:
+      label: Training Data
+      description: Specify whether additional training data were used.
+      options:
+        - Behavior-Skill Only
+        - Additional Data
+    validations:
+      required: true
+
+  - type: input
+    id: overall_tscr
+    attributes:
+      label: Overall TSCR (%)
+      description: Enter the overall Task Skill Completion Rate from 0 to 100 without the percent sign.
+      placeholder: "e.g., 48.4"
+    validations:
+      required: true
+
+  - type: input
+    id: benchmark_version
+    attributes:
+      label: Benchmark Version / Commit
+      description: Version number or commit SHA of the evaluation code.
+      placeholder: "e.g., v1.0 or 3a9f2c1"
+    validations:
+      required: true
+
+  - type: input
+    id: code_url
+    attributes:
+      label: Code URL
+      description: Public URL of the implementation used for evaluation.
+      placeholder: "https://github.com/..."
+    validations:
+      required: true
+
+  - type: input
+    id: paper_url
+    attributes:
+      label: Paper or Project URL
+      description: Link to the paper or project page, if available.
+      placeholder: "https://arxiv.org/abs/..."
+
+  - type: input
+    id: checkpoint_url
+    attributes:
+      label: Checkpoint URL
+      description: Link to the evaluated model checkpoint, if available.
+      placeholder: "https://huggingface.co/..."
+
+  - type: textarea
+    id: detailed_results
+    attributes:
+      label: Detailed Results
+      description: Upload cross_task_skill_summary.json or provide a public URL. It should contain task-wise TSCR and skill-wise STSR results.
+      placeholder: "Drag and drop the JSON file here, or provide a public URL."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_data
+    attributes:
+      label: Additional Training Data Details
+      description: If Additional Data was selected, describe the datasets used.
+      placeholder: "Dataset names, sizes, and URLs."
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Provide relevant training details, evaluation settings, or exceptions.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I evaluated this method using the official Behavior-Skill evaluation set and protocol.
+          required: true
+        - label: I confirm that the submitted results are accurate and reproducible.
+          required: true

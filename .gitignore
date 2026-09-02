@@ -1,0 +1,25 @@
+# Local backups (not part of the release)
+archive/
+
+# JoyLo runtime artifacts (sampled task instances, device calibration)
+joylo/sampled_task/
+joylo/configs/
+
+# Simulator assets downloaded by setup.sh (recreated on demand)
+datasets/
+
+# Python runtime artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Evaluation outputs and logs
+outputs/
+output/
+run_logs/
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

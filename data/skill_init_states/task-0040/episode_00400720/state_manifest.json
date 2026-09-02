@@ -1,0 +1,71 @@
+{
+  "input_hdf5": "behavior_raw/task-0040/episode_00400720.hdf5",
+  "episode_id": 0,
+  "skills": [
+    {
+      "skill_idx": 0,
+      "skill": "Move to the microwave on the countertop in the kitchen.",
+      "start_frame": 0,
+      "end_frame": 885,
+      "state_file": "skill_init_states/task-0040/episode_00400720/skill_00_state.npz",
+      "scene_file": "skill_init_states/task-0040/episode_00400720/skill_00_scene.json"
+    },
+    {
+      "skill_idx": 1,
+      "skill": "Open the door of the microwave using the right gripper.",
+      "start_frame": 968,
+      "end_frame": 1552,
+      "state_file": "skill_init_states/task-0040/episode_00400720/skill_01_state.npz",
+      "scene_file": "skill_init_states/task-0040/episode_00400720/skill_01_scene.json"
+    },
+    {
+      "skill_idx": 2,
+      "skill": "Move to the popcorn bag on the countertop in the kitchen.",
+      "start_frame": 1552,
+      "end_frame": 1696,
+      "state_file": "skill_init_states/task-0040/episode_00400720/skill_02_state.npz",
+      "scene_file": "skill_init_states/task-0040/episode_00400720/skill_02_scene.json"
+    },
+    {
+      "skill_idx": 3,
+      "skill": "Pick up the popcorn bag from the countertop using the right gripper.",
+      "start_frame": 1696,
+      "end_frame": 2209,
+      "state_file": "skill_init_states/task-0040/episode_00400720/skill_03_state.npz",
+      "scene_file": "skill_init_states/task-0040/episode_00400720/skill_03_scene.json"
+    },
+    {
+      "skill_idx": 4,
+      "skill": "Move back to the microwave on the countertop in the kitchen.",
+      "start_frame": 2209,
+      "end_frame": 2611,
+      "state_file": "skill_init_states/task-0040/episode_00400720/skill_04_state.npz",
+      "scene_file": "skill_init_states/task-0040/episode_00400720/skill_04_scene.json"
+    },
+    {
+      "skill_idx": 5,
+      "skill": "Place the popcorn bag into the microwave using the right gripper.",
+      "start_frame": 2611,
+      "end_frame": 3108,
+      "state_file": "skill_init_states/task-0040/episode_00400720/skill_05_state.npz",
+      "scene_file": "skill_init_states/task-0040/episode_00400720/skill_05_scene.json"
+    },
+    {
+      "skill_idx": 6,
+      "skill": "Close the door of the microwave using the left gripper.",
+      "start_frame": 3125,
+      "end_frame": 3359,
+      "state_file": "skill_init_states/task-0040/episode_00400720/skill_06_state.npz",
+      "scene_file": "skill_init_states/task-0040/episode_00400720/skill_06_scene.json"
+    },
+    {
+      "skill_idx": 7,
+      "skill": "Turn on the switch of the microwave using the right gripper.",
+      "start_frame": 3450,
+      "end_frame": 3677,
+      "state_file": "skill_init_states/task-0040/episode_00400720/skill_07_state.npz",
+      "scene_file": "skill_init_states/task-0040/episode_00400720/skill_07_scene.json"
+    }
+  ],
+  "extraction_mode": "replay"
+}

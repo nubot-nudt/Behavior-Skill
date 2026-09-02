@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# pt12_bddl/turning_on_radio.yaml
+#
+# Subtask evaluation config (ref: skill_eval_configs/make_microwave_popcorn.yaml)
+#
+# Annotation source:
+#   DATASETS/behavior/2025-challenge-demos/annotation_finegrain-235B/
+#   task-0000/episode_00000010_step.json
+# Total 4 skills, frame ranges:
+#   skill_00: 0 -> 848
+#   skill_01: 848 -> 1840
+#   skill_02: 1855 -> 2184
+#   skill_03: 2184 -> 2454
+#
+# Task description:
+#   Turn on the radio receiver that's on the table in the living room.
+# ─────────────────────────────────────────────────────────────────────────────
+
+task_name: turning_on_radio
+activity_definition_id: 0
+
+objects_bddl: |
+  (:objects
+      radio_receiver.n.01_1 - radio_receiver.n.01
+      table.n.02_1 - table.n.02
+      floor.n.01_1 - floor.n.01
+      agent.n.01_1 - agent.n.01
+  )
+
+init_bddl: |
+  (:init
+      (not (toggled_on radio_receiver.n.01_1))
+      (ontop radio_receiver.n.01_1 table.n.02_1)
+      (inroom table.n.02_1 living_room)
+      (inroom floor.n.01_1 living_room)
+      (ontop agent.n.01_1 floor.n.01_1)
+  )
+
+# ── Per-skill evaluation definitions ─────────────────────────────────────────────────────
+# bddl_goal: BDDL goal expression (without outer (:goal ...) wrapper)
+
+skills:
+  # ── Skill 0: Move near the radio on the coffee table ───────────────────────────────────────
+  - id: 0
+    instruction: "Move to the radio on the coffee table in the living room."
+    skill_description: "move to"
+    type: navigation
+    bddl_goal: "(near agent.n.01_1 radio_receiver.n.01_1)"
+
+  # ── Skill 1: Pick up the radio with the right gripper ───────────────────────────────────────────────
+  - id: 1
+    instruction: "Pick up the radio from the coffee table using the right gripper."
+    skill_description: "pick up from"
+    type: manipulation
+    bddl_goal: "(grasped agent.n.01_1 radio_receiver.n.01_1)"
+
+  # ── Skill 2: Turn on the radio switch using the left gripper ───────────────────────────────────────────
+  - id: 2
+    instruction: "Turn on the switch of the radio held in the right gripper using the left gripper."
+    skill_description: "press"
+    type: manipulation
+    bddl_goal: "(toggled_on radio_receiver.n.01_1)"
+
+  # ── Skill 3: Place the radio back on the coffee table ───────────────────────────────────────────────
+  - id: 3
+    instruction: "Place the radio on the coffee table using the right gripper."
+    skill_description: "place on"
+    type: manipulation
+    bddl_goal: >
+      (and
+        (ontop radio_receiver.n.01_1 table.n.02_1)
+        (not (grasped agent.n.01_1 radio_receiver.n.01_1))
+      )
