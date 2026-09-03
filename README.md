@@ -20,6 +20,26 @@ independently under valid execution preconditions.
   <img src="assets/overview.png" width="100%" alt="Overview of the Behavior-Skill benchmark">
 </p>
 
+## Table of Contents
+- [Highlights](#highlights)
+- [Why Independent Skill Evaluation?](#why-independent-skill-evaluation)
+- [Repository Scope](#repository-scope)
+- [Repository Structure](#repository-structure)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Download the Benchmark Data](#download-the-benchmark-data)
+- [Model Checkpoints](#model-checkpoints)
+- [Policy Integration](#policy-integration)
+- [Quick Start](#quick-start)
+- [Evaluation Protocol](#evaluation-protocol)
+- [Outputs](#outputs)
+- [Metrics](#metrics)
+- [Benchmark Results](#benchmark-results)
+- [Leaderboard and Result Submission](#leaderboard-and-result-submission)
+- [Citation](#citation)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+  
 ## Highlights
 
 - **235,492 skill instances** constructed from **10,000 demonstrations** across
