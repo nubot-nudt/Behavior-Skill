@@ -151,13 +151,7 @@ def main():
         logger.error("[main] run_batch() crashed with an exception:", exc_info=True)
         all_results = {}
 
-    # all skills evaluated: shut down Isaac Sim once
-    try:
-        og.shutdown()
-        logger.info("[main] og.shutdown() done.")
-    except Exception:
-        pass
-
+    # write the summary before shutting down: og.shutdown() ends the process
     os.makedirs(log_dir, exist_ok=True)
     summary_file = os.path.join(log_dir, f"{args.task}_summary.json")
     with open(summary_file, "w") as f:
@@ -173,6 +167,13 @@ def main():
     print(f"{'='*60}\nDetailed results: {summary_file}")
     if not args.no_video:
         print(f"Video directory: {os.path.join(log_dir, 'videos')}")
+
+    # all skills evaluated: shut down Isaac Sim once
+    try:
+        og.shutdown()
+        logger.info("[main] og.shutdown() done.")
+    except Exception:
+        pass
 
 
 if __name__ == "__main__":
