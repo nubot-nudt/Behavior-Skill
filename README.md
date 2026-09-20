@@ -158,6 +158,12 @@ Afterwards, activate the environment:
 conda activate behavior-skill
 ```
 
+Install the runtime dependencies required by the Behavior-Skill evaluator:
+
+```bash
+python -m pip install "hydra-core>=1.3.2" "omegaconf>=2.3.0" "msgpack>=1.1.0"
+```
+
 ## Download the Benchmark Data
 
 This step fetches the benchmark's evaluation data (annotations, evaluation
