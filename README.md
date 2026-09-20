@@ -130,7 +130,7 @@ predicates are sensitive to environment-version differences.
 ### 1. Clone Behavior-Skill
 
 ```bash
-git clone https://github.com/mafangniu/Behavior-Skill.git
+git clone https://github.com/nubot-nudt/Behavior-Skill.git
 cd Behavior-Skill
 ```
 

@@ -2,7 +2,9 @@
 archive/
 
 # JoyLo runtime artifacts (sampled task instances, device calibration)
-joylo/sampled_task/
+# available_tasks.yaml is kept: benchmark.skill_eval reads it to build the environment config
+joylo/sampled_task/*
+!joylo/sampled_task/available_tasks.yaml
 joylo/configs/
 
 # Simulator assets downloaded by setup.sh (recreated on demand)
