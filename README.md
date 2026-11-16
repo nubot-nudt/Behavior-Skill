@@ -14,7 +14,7 @@ learning and evaluation of long-horizon tasks around executable constituent
 skills. Each evaluation unit combines a skill instruction, a restorable
 intermediate simulator state, an executable BDDL success condition, and an
 evaluation horizon. This makes it possible to evaluate every constituent skill
-independently under valid execution preconditions.
+independently under valid execution preconditions
 
 <p align="center">
   <img src="assets/overview.png" width="100%" alt="Overview of the Behavior-Skill benchmark">
